@@ -1,0 +1,35 @@
+[project]
+name = 'assetmodel'
+description = 'Python datamodel based on OWASP open asset model (OAM)'
+authors = [
+    {name = 'Nick Le Mouton', email = 'nick@noodles.nz'},
+]
+license = 'MIT'
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Intended Audience :: System Administrators',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: Unix',
+    'Operating System :: POSIX :: Linux',
+    'Environment :: Console',
+    'Environment :: MacOS X',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Internet',
+]
+requires-python = '>=3.8'
+dependencies = [
+    "pydantic>=2.9.1"
+    "python-dotenv~=1.0.0",
+    "pytest"
+]
