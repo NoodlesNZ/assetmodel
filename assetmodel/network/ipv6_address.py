@@ -6,4 +6,4 @@ from typing import Optional
 class IPv6Address(BaseModel):
     address: ipaddress.IPv6Address
     netblock: Optional[IPv6Netblock] = None
-    source: Source
+    source: Optional[Source] = None
