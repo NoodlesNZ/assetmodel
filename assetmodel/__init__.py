@@ -3,17 +3,20 @@ from importlib import import_module
 import typing
 
 if typing.TYPE_CHECKING:
-    from .autnum_record import AutnumRecord
+    from .registration.autnum_record import AutnumRecord
     from .autonomous_system import AutonomousSystem
-    from .domain_record import DomainRecord
+    from .registration.domain_record import DomainRecord
     from .fingerprint import Fingerprint
-    from .fqdn import FQDN
-    from .ip_address import IpAddress
-    from .netblock import Netblock
+    from .domain.fqdn import FQDN
+    from .network.ipv4_address import IPv4Address
+    from .network.ipv4_netblock import IPv4Netblock
+    from .network.ipv6_address import IPv6Address
+    from .network.ipv6_netblock import IPv6Netblock
     from .network_endpoint import NetworkEndpoint
     from .organization import Organization
     from .service import Service
     from .socket_address import SocketAddress
+    from .source import Source
     from .tls_certificate import TlsCertificate
 
 __all__ = (
@@ -22,28 +25,34 @@ __all__ = (
     'DomainRecord',
     'Fingerprint',
     'FQDN',
-    'IpAddress',
-    'Netblock',
+    'IPv4Address',
+    'IPv4Netblock',
+    'IPv6Address',
+    'IPv6Netblock',
     'NetworkEndpoint',
     'Organization',
     'Service',
     'SocketAddress',
+    'Source',
     'TlsCertificate'
 )
 
 # A mapping of {<member name>: (package, <module name>)} defining dynamic imports
 _dynamic_imports: 'dict[str, tuple[str, str]]' = {
-    'AutnumRecord': (__spec__.parent, '.autnum_record'),
+    'AutnumRecord': (__spec__.parent, '.registration.autnum_record'),
     'AutonomousSystem': (__spec__.parent, '.autonomous_system'),
-    'DomainRecord': (__spec__.parent, '.domain_record'),
+    'DomainRecord': (__spec__.parent, '.registration.domain_record'),
     'Fingerprint': (__spec__.parent, '.fingerprint'),
-    'FQDN': (__spec__.parent, '.fqdn'),
-    'IpAddress': (__spec__.parent, '.ip_address'),
-    'Netblock': (__spec__.parent, '.netblock'),
+    'FQDN': (__spec__.parent, '.domain.fqdn'),
+    'IPv4Address': (__spec__.parent, '.network.ipv4_address'),
+    'IPv4Netblock': (__spec__.parent, '.network.ipv4_netblock'),
+    'IPv6Address': (__spec__.parent, '.network.ipv6_address'),
+    'IPv6Netblock': (__spec__.parent, '.network.ipv6_netblock'),
     'NetworkEndpoint': (__spec__.parent, 'network_endpoint'),
     'Organization': (__spec__.parent, '.organization'),
     'Service': (__spec__.parent, '.service'),
     'SocketAddress': (__spec__.parent, '.socket_address'),
+    'Source': (__spec__.parent, '.source'),
     'TlsCertificate': (__spec__.parent, '.tls_certificate')
 }
 
