@@ -1,16 +1,17 @@
 from pydantic import BaseModel
 from typing import List, Optional
+from datetime import date
 
 class DomainRecord(BaseModel):
-    raw: Optional[str]
-    id: Optional[str]
-    domain: Optional[str]
-    punycode: Optional[str]
-    name: Optional[str]
-    extension: Optional[str]
-    whois_server: Optional[str]
-    created_date: Optional[str]
-    updated_date: Optional[str]
-    expiration_date: Optional[str]
-    status: Optional[List[str]]
-    dnssec: Optional[bool]
+    raw: Optional[str] = None
+    id: Optional[str] = None
+    domain: Optional[str] = None
+    punycode: Optional[str] = None
+    name: Optional[str] = None
+    extension: Optional[str] = None
+    whois_server: Optional[str] = None
+    created_date: Optional[date] = None
+    updated_date: Optional[date] = None
+    expiration_date: Optional[date] = None
+    status: Optional[List[str]] = None
+    dnssec: Optional[bool] = None
