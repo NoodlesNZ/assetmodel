@@ -1,10 +1,10 @@
 [project]
-name = 'assetmodel'
-description = 'Python datamodel based on OWASP open asset model (OAM)'
+name = "assetmodel"
+version = "0.0.1"
+description = "Python datamodel based on OWASP open asset model (OAM)"
 authors = [
     {name = 'Nick Le Mouton', email = 'nick@noodles.nz'},
 ]
-license = 'MIT'
 classifiers = [
     'Development Status :: 5 - Production/Stable',
     'Programming Language :: Python',
@@ -27,9 +27,10 @@ classifiers = [
     'Topic :: Software Development :: Libraries :: Python Modules',
     'Topic :: Internet',
 ]
-requires-python = '>=3.8'
+requires-python = ">=3.8"
 dependencies = [
     "pydantic>=2.9.1",
     "python-dotenv~=1.0.0",
     "pytest",
+    "flake8",
 ]
