@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "assetmodel"
 version = "0.0.1"
@@ -34,3 +38,6 @@ dependencies = [
     "pytest",
     "flake8",
 ]
+
+[tool.hatch.metadata]
+allow-direct-references = true
