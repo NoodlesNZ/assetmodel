@@ -1,8 +1,9 @@
-from __future__ import annotations
-
 from pydantic import BaseModel
-from assetmodel import DomainRecord, FQDN, IPv4Address, IPv6Address, Source
+from assetmodel import DomainRecord, IPv4Address, IPv6Address, Source
 from typing import List, Optional
+from typing import ForwardRef
+
+FQDN = ForwardRef('FQDN')
 
 class FQDN(BaseModel):
     name: str
