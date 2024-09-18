@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from pydantic import BaseModel
 from assetmodel import DomainRecord, FQDN, IPv4Address, IPv6Address, Source
 from typing import List, Optional
