@@ -7,7 +7,7 @@ FQDN = ForwardRef('FQDN')
 
 class FQDN(BaseModel):
     name: str
-    source: Source
+    source: Optional[Source] = None
     a_record: Optional[List[IPv4Address]] = None
     aaaa_record: Optional[List[IPv6Address]] = None
     cname_record: Optional[FQDN] = None

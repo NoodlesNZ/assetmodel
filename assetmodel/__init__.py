@@ -17,7 +17,7 @@ if typing.TYPE_CHECKING:
     from .service import Service
     from .socket_address import SocketAddress
     from .source import Source
-    from .tls_certificate import TlsCertificate
+    from .tls_certificate import TLSCertificate
 
 __all__ = (
     'AutnumRecord',
@@ -34,7 +34,7 @@ __all__ = (
     'Service',
     'SocketAddress',
     'Source',
-    'TlsCertificate'
+    'TLSCertificate'
 )
 
 # A mapping of {<member name>: (package, <module name>)} defining dynamic imports
@@ -53,7 +53,7 @@ _dynamic_imports: 'dict[str, tuple[str, str]]' = {
     'Service': (__spec__.parent, '.service'),
     'SocketAddress': (__spec__.parent, '.socket_address'),
     'Source': (__spec__.parent, '.source'),
-    'TlsCertificate': (__spec__.parent, '.tls_certificate')
+    'TLSCertificate': (__spec__.parent, '.tls_certificate')
 }
 
 def __getattr__(attr_name: str) -> object:
